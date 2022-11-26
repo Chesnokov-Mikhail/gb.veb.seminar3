@@ -1,0 +1,8 @@
+html {
+    font-size: 18px;
+    font-family: 'Noto Serif', serif;
+}
+#user_name {
+    color: orangered;
+    font-size: 22px;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <title>Запрос имени пользователя</title>
+    </head>
+    <body>
+        <script>
+            function getUserName () {
+                let getUserName = prompt("Введите свое имя:");
+                if (getUserName) {
+                    return getUserName;
+                } else {
+                    alert("Вы ничего не ввели!")
+                    return "Неизвестный";
+                }
+            }
+            const nameCurentUser = getUserName();   
+            alert(`Ваше имя: ${nameCurentUser}`);
+            
+            // Ждем когда загрузится вся страница, чтобы вставить значения переменной в текст html
+            window.onload = function() {
+                document.getElementById('user_name').innerHTML = nameCurentUser;
+            }
+        </script>
+
+        <p>Здравствуйте 
+            <span id="user_name"></span>
+            !
+        </p>
+    </body>
+</html>
